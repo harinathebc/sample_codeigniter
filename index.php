@@ -81,6 +81,7 @@ switch ($domain)
         break;
 }
 */
+echo phpinfo();exit;
 $domain = strtolower($_SERVER['HTTP_HOST']);
 
 switch($domain) {
