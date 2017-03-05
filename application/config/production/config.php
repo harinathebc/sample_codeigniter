@@ -23,6 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+
 $config['base_url'] = 'https://harinathci.herokuapp.com/';
 $config['site_title'] = 'Ondefend - Partners';
 $config['site_logo'] = 'assets/images/logo.png';

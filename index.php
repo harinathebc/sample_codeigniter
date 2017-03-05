@@ -92,6 +92,10 @@ case ‘stage.mysite.com’ :
 //our staging server
 define('ENVIRONMENT', 'staging');
 break;
+case demo.ondefenf.com’ :
+//our staging server
+define('ENVIRONMENT', 'demo');
+break;
 
 default :
 define('ENVIRONMENT', 'production');
