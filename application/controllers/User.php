@@ -70,6 +70,7 @@ class User extends CI_Controller {
 	}
 	public function dashboard()
 	{
+		//echo $this->config->item('site_title');exit;
 		$userinfo = $this->session->userdata('userdetails');
 		$this->load->view('html/header');
 		$this->load->view('user/dashboard');
@@ -102,7 +103,7 @@ class User extends CI_Controller {
 
 			}else{
 				$this->load->library('email');
-				$this->email->from($post['email'], $post['name']);
+				$this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
 				$this->email->to('c.freedman@ondefend.com');
 				$this->email->subject($post['subject']);
 				$html = $post['message'];
@@ -875,7 +876,7 @@ class User extends CI_Controller {
 						if (count($passwordchange)>0)
 							{
 								$this->load->library('email');
-								$this->email->from('admin@mew.com', 'MEW');
+								$this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
 								$this->email->to($changepasword['email']);
 								$this->email->subject('MEW - Change password');
 								$html = "Your password is sucessfully changed cureent password is".$conpassword;
@@ -930,7 +931,7 @@ class User extends CI_Controller {
 		{
 			$cust_id = $users['user_id'];
             $this->load->library('email');
-            $this->email->from('contactus@sergeinfo.com', 'Serge Software');
+            $this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
             $this->email->to($email);
             $this->email->subject('Serge Software Solutions - Forgot Password');
             $html = "Click this link to reset your password. ".site_url('user/resetpassword/?code='.base64_encode($email).'__'.base64_encode($cust_id));
@@ -1062,7 +1063,7 @@ class User extends CI_Controller {
 		if (count($addcus)>0)
 			{
 						$this->load->library('email');
-						$this->email->from('admin@mew.com', 'MEW');
+						$this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
 						$this->email->to($post['email']);
 						$this->email->subject('MEW - Create customer');
 						$html = "This is Your Email ID :".$post['email']." and Password : ".$post['password']."check your login details";
@@ -1351,7 +1352,7 @@ class User extends CI_Controller {
 								$importcustomer=$this->groups_model->importcustomer($impostcus);
 								if(count($importcustomer)>0){
 										$this->load->library('email');
-										$this->email->from('admin@mew.com', 'MEW');
+										$this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
 										$this->email->to($data['email']);
 										$this->email->subject('MEW - Create customer');
 										$html = "This is Your Email ID :".$data[5]." and Password : ".$data[6]."check your login details";

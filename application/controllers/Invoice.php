@@ -97,7 +97,7 @@ class Invoice extends CI_Controller {
 					$invoice_id = $this->invoice_model->addinvoice($invoice_data);
 					$invoices[] = $invoice_id;
 					$this->load->library('email');
-					$this->email->from('admin@mew.com', 'MEW');
+					$this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
 					$this->email->to($group['contact_email']);
 					$this->email->bcc('tavvaforu@gmail.com');
 					$this->email->subject('MEW - Invoice genarated for '.$lastmonth_date);

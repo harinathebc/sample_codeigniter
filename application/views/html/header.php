@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
   <meta name="description" content="bootstrap admin template">
   <meta name="author" content="">
-  <title>OnDefend - Partners</title>
+  <title><?php echo $this->config->item('site_title');?></title>
   <link rel="apple-touch-icon" href="<?php echo base_url(); ?>assets/images/apple-touch-icon.png">
   <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico">
   <!-- Stylesheets -->
@@ -83,8 +83,8 @@
         <i class="icon wb-more-horizontal" aria-hidden="true"></i>
       </button>
       <a class="navbar-brand navbar-brand-center" href="<?php echo base_url();?>">
-        <img class="navbar-brand-logo navbar-brand-logo-normal" src="<?php echo site_url('assets/images/logo-mbl.png'); ?>">
-        <img class="navbar-brand-logo navbar-brand-logo-special" src="<?php echo site_url('assets/images/logo-mbl.png'); ?>">
+        <img class="navbar-brand-logo navbar-brand-logo-normal" src="<?php echo site_url($this->config->item('site_logo'));?>">
+        <img class="navbar-brand-logo navbar-brand-logo-special" src="<?php echo site_url($this->config->item('site_logo'));?>">
       
       </a>
       <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"

@@ -403,7 +403,7 @@ class Association extends CI_Controller {
 		if (count($employeedata)>0)
 			{
 						$this->load->library('email');
-						$this->email->from('admin@mew.com', 'MEW');
+						$this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
 						$this->email->to($post['email']);
 						$this->email->subject('MEW - Create customer');
 						$html = "This is Your Email ID :".$post['email']." and Password : ".$post['password']."check your login details";

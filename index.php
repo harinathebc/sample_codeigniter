@@ -54,7 +54,7 @@ TAVVA
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
 /*
  *---------------------------------------------------------------
@@ -64,9 +64,45 @@ TAVVA
  * Different environments will require different levels of error reporting.
  * By default development will show errors but testing and live will hide them.
  */
+
+ // index.php
+/*
+$domain = $_SERVER['SERVER_NAME'];
+switch ($domain)
+{
+    case 'localhost':
+        $this->load->database('firstsitedb');
+        break;
+    case 'www.secondsite.com':
+        $this->load->database('secondsitedb');
+        break;
+    default:
+        show_error('No Site Found');
+        break;
+}
+*/
+$domain = strtolower($_SERVER['HTTP_HOST']);
+
+switch($domain) {
+case 'localhost' :
+define('ENVIRONMENT', 'localhost');
+break;
+
+case ‘stage.mysite.com’ :
+//our staging server
+define('ENVIRONMENT', 'staging');
+break;
+
+default :
+define('ENVIRONMENT', 'production');
+break;
+}
+
+
+
 switch (ENVIRONMENT)
 {
-	case 'development':
+	case 'localhost':
 		error_reporting(-1);
 		ini_set('display_errors', 1);
 	break;
