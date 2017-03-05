@@ -3,7 +3,7 @@
       <div class="panel">
         <div class="panel-body">
           <div class="brand">
-            <img class="brand-img" src="<?php echo site_url('assets/images/logo-mbl.png'); ?>" alt="Logo">
+            <img class="brand-img" src="<?php echo site_url($this->config->item('site_logo')); ?>" alt="<?php echo $this->config->item('site_title');?>">
           </div>
 			<?php if($this->session->flashdata('loginerror')): ?>
 				<div id="alertmessages" class="alert dark alert-danger alert-dismissible" role="alert">

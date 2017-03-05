@@ -22,7 +22,7 @@
                 </div>
 	<?php } ?>
 
-            <img class="brand-img" src="<?php echo base_url().'/assets/images/logo-mbl.png';?>" alt="...">
+            <img class="brand-img" src="<?php echo base_url().$this->config->item('site_logo');?>" alt="...">
            
           </div>
 		  
