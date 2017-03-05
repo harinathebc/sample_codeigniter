@@ -1,8 +1,8 @@
 <!-- Footer -->
   <footer class="site-footer">
-    <div class="site-footer-legal">© 2016 <a href="http://ondefend.com">OnDefend</a></div>
+    <div class="site-footer-legal">© 2016 <a href="http://ondefend.com"><?php echo $this->config->item('site_title');?></a></div>
     <div class="site-footer-right">
-      Powered By <a href="http://ondefend.com">OnDefend</a>
+      Powered By <a href="<?php echo $this->config->item('website_url');?>"><?php echo $this->config->item('site_title');?></a>
     </div>
   </footer>
 

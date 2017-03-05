@@ -23,7 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/sample_codeigniter/';
+$config['base_url'] = 'https://harinathci.herokuapp.com/';
+$config['site_title'] = 'Ondefend - Partners';
+$config['site_logo'] = 'assets/images/logo.png';
+$config['from_email'] = 'admin@ondefend.com';
+$config['from_name'] = 'OnDefend';
+$config['website_url'] = 'http://ondefend.com/';
+
 
 
 /*

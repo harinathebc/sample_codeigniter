@@ -28,6 +28,7 @@ $config['site_title'] = 'Ondefend - Partners';
 $config['site_logo'] = 'assets/images/logo.png';
 $config['from_email'] = 'admin@ondefend.com';
 $config['from_name'] = 'OnDefend';
+$config['website_url'] = 'http://ondefend.com/';
 
 /*
 |--------------------------------------------------------------------------
