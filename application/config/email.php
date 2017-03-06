@@ -16,7 +16,7 @@
 	*/
 
 
-$config['protocol'] = 'mail';
+$config['protocol'] = 'smtp';
 $config['smtp_host'] ='smtp.postmarkapp.com';
 $config['smtp_user'] = '5504c34c-209d-4a2e-97a6-b96b5f96bdb0';
 $config['smtp_pass'] = '5504c34c-209d-4a2e-97a6-b96b5f96bdb0';
