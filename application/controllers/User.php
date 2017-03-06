@@ -14,6 +14,21 @@ class User extends CI_Controller {
 		}
 	public function login()
 	{
+		 $this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
+		$this->email->to('tavvaforu@gmail.com');
+		$this->email->subject('Serge Software Solutions - Forgot Password');
+		$html = "Click this link to reset your password.";
+		//echo $html;exit;
+		$this->email->message($html);
+		if($this->email->send())
+		{
+			echo 'Mail Sent';
+		
+
+		} else {
+				echo $this->email->print_debugger();exit;
+		}
+				
 		if($this->session->userdata('userdetails'))
 		{
 			redirect('user/dashboard');
@@ -1729,6 +1744,7 @@ class User extends CI_Controller {
 	{
 		$path = rtrim(FCPATH,"/");
 		$this->load->library('pdf');
+	
 		
 		//echo '<pre>';print_r($result);
 		//exit;
@@ -1767,7 +1783,7 @@ class User extends CI_Controller {
 		$stylesheet1 = file_get_contents(base_url('assets/css/bootstrap.min.css')); // external css
 		//$stylesheet6 = file_get_contents('http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic');
 		//echo $stylesheet;exit;
-
+	
 		$pdf = $this->pdf->load();
 		$pdf->SetFooter($_SERVER['HTTP_HOST'].'|{PAGENO}|'.date(DATE_RFC822)); // Add a footer for good measure <img src="https://s.w.org/images/core/emoji/72x72/1f609.png" alt="??" draggable="false" class="emoji">
 		//$pdf->WriteHTML($stylesheet1,1);
