@@ -1768,7 +1768,7 @@ class User extends CI_Controller {
 		$stylesheet1 = file_get_contents(base_url('assets/css/bootstrap.min.css')); // external css
 		//$stylesheet6 = file_get_contents('http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic');
 		//echo $stylesheet;exit;
-		require_once __DIR__ . '/vendor/autoload.php';
+		require_once '/vendor/autoload.php';
 		echo __DIR__ . '/vendor/autoload.php';exit;
 		$pdf = new mPDF();
 		///$pdf = $this->pdf->load();
