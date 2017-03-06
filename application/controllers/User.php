@@ -13,24 +13,7 @@ class User extends CI_Controller {
         $this->load->helper(array('url','html','form')); 
 		}
 	public function login()
-	{
-		$this->load->library('email');
-		 $this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
-		$this->email->to('tavvaforu@gmail.com');
-		$this->email->subject('Serge Software Solutions - Forgot Password');
-		$html = "Click this link to reset your password.";
-		//echo $html;exit;
-		$this->email->message($html);
-		if($this->email->send())
-		{
-			echo 'Mail Sent';
-		
-
-		} else {
-				echo "TEST";
-				echo $this->email->print_debugger();exit;
-		}
-				
+	{			
 		if($this->session->userdata('userdetails'))
 		{
 			redirect('user/dashboard');
