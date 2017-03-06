@@ -1768,8 +1768,11 @@ class User extends CI_Controller {
 		$stylesheet1 = file_get_contents(base_url('assets/css/bootstrap.min.css')); // external css
 		//$stylesheet6 = file_get_contents('http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic');
 		//echo $stylesheet;exit;
-	
-		$pdf = $this->pdf->load();
+		require_once __DIR__ . '/vendor/autoload.php';
+		echo __DIR__ . '/vendor/autoload.php';
+		$pdf = new mPDF();
+		///$pdf = $this->pdf->load();
+		
 		$pdf->SetFooter($_SERVER['HTTP_HOST'].'|{PAGENO}|'.date(DATE_RFC822)); // Add a footer for good measure <img src="https://s.w.org/images/core/emoji/72x72/1f609.png" alt="??" draggable="false" class="emoji">
 		//$pdf->WriteHTML($stylesheet1,1);
 
