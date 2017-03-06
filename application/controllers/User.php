@@ -1769,7 +1769,7 @@ class User extends CI_Controller {
 		//$stylesheet6 = file_get_contents('http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic');
 		//echo $stylesheet;exit;
 		require_once APPPATH.'vendor/autoload.php';
-		echo __DIR__ . '/vendor/autoload.php';exit;
+		echo APPPATH . '/vendor/autoload.php';exit;
 		$pdf = new mPDF();
 		///$pdf = $this->pdf->load();
 		
