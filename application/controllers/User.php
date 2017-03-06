@@ -1728,7 +1728,7 @@ class User extends CI_Controller {
 	public function pdf()
 	{
 		$path = rtrim(FCPATH,"/");
-		$this->load->library('pdf');
+		////$this->load->library('pdf');
 	
 		
 		//echo '<pre>';print_r($result);
