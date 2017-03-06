@@ -14,6 +14,7 @@ class User extends CI_Controller {
 		}
 	public function login()
 	{
+		$this->load->library('email');
 		 $this->email->from($this->config->item('from_email'), $this->config->item('from_name'));
 		$this->email->to('tavvaforu@gmail.com');
 		$this->email->subject('Serge Software Solutions - Forgot Password');
