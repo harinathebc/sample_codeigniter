@@ -26,6 +26,7 @@ class User extends CI_Controller {
 		
 
 		} else {
+				echo "TEST";
 				echo $this->email->print_debugger();exit;
 		}
 				
