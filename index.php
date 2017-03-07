@@ -103,10 +103,6 @@ break;
 }
 
 
-
-echo "HI";
-
-
 switch (ENVIRONMENT)
 {
 	case 'localhost':
