@@ -83,6 +83,7 @@ $db = substr($url["path"], 1);
 //echo '<pre>';print_r($url);exit;
 //echo $url;
 
+/*
 $db['default'] = array(
 	'hostname' => $server,
 	'username' => $username,
@@ -103,7 +104,7 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-
+*/
 
 $db['default'] = array(
 	'dsn'	=> '',
