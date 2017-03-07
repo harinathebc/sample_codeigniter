@@ -80,8 +80,8 @@ $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
 
-echo '<pre>';print_r($url);exit;
-echo $url;
+//echo '<pre>';print_r($url);exit;
+//echo $url;
 
 $db['default'] = array(
 	'dsn'	=> '',
