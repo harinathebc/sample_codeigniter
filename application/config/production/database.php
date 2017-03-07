@@ -84,7 +84,6 @@ $db = substr($url["path"], 1);
 //echo $url;
 
 $db['default'] = array(
-	'dsn'	=> '',
 	'hostname' => $server,
 	'username' => $username,
 	'password' => $password,
@@ -106,7 +105,7 @@ $db['default'] = array(
 );
 
 
-/*$db['default'] = array(
+$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => '50.63.25.2',
 	'username' => 'wordpress_1',
@@ -126,5 +125,5 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-); */
+); 
 
