@@ -90,7 +90,7 @@ $db = substr($url["path"], 1);
 	'database' => 'heroku_1ad233d0efd5e6c',
 	'dbdriver' => 'mysqli',
 	
-	
+	 
 $db['default'] = array(
 	'hostname' => $server,
 	'username' => $username,
