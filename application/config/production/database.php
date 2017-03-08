@@ -78,17 +78,16 @@ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
-$db = substr($url["path"], 1);
+$database_name = substr($url["path"], 1);
 
 //echo '<pre>';print_r($url);exit;
 //echo $url;
 
-/*
 $db['default'] = array(
 	'hostname' => $server,
 	'username' => $username,
 	'password' => $password,
-	'database' => $db,
+	'database' => $database_name,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -104,27 +103,3 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-*/
-
-$db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => '50.63.25.2',
-	'username' => 'wordpress_1',
-	'password' => 'M50TXg1ae$',
-	'database' => 'wordpress_0',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-); 
-
