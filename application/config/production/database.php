@@ -84,6 +84,13 @@ $db = substr($url["path"], 1);
 //echo $url;
 
 /*
+	'hostname' => 'us-cdbr-iron-east-03.cleardb.net',
+	'username' => 'be850a358d4713',
+	'password' => '883da356',
+	'database' => 'heroku_1ad233d0efd5e6c',
+	'dbdriver' => 'mysqli',
+	
+	
 $db['default'] = array(
 	'hostname' => $server,
 	'username' => $username,
@@ -108,14 +115,14 @@ $db['default'] = array(
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'us-cdbr-iron-east-03.cleardb.net',
-	'username' => 'be850a358d4713',
-	'password' => '883da356',
-	'database' => 'heroku_1ad233d0efd5e6c',
+	'hostname' => '50.63.25.2',
+	'username' => 'wordpress_1',
+	'password' => 'M50TXg1ae$',
+	'database' => 'wordpress_0',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT === 'production'),
+	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
