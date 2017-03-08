@@ -84,13 +84,6 @@ $db = substr($url["path"], 1);
 //echo $url;
 
 /*
-	'hostname' => 'us-cdbr-iron-east-03.cleardb.net',
-	'username' => 'be850a358d4713',
-	'password' => '883da356',
-	'database' => 'heroku_1ad233d0efd5e6c',
-	'dbdriver' => 'mysqli',
-	
-	 
 $db['default'] = array(
 	'hostname' => $server,
 	'username' => $username,
